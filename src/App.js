@@ -2,14 +2,23 @@ import './App.css';
 import Texto from './components/Texto';
 
 const App = () => {
+  const vecPersonas = [
+    'Rigoberta Menchu',
+    'Pablo Forlán',
+    'Morro García',
+    'Pablo Bengoechea',
+    'Luis Suárez',
+    'Lucas Olaza',
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
         <h2>Ejemplo</h2>
-        <Texto nombre="Rigoberta Menchu" />
-        <Texto nombre="Pablo Forlán" />
-        <Texto nombre="Morro García" />
       </header>
+      {vecPersonas.map((elem, index) => (
+        <Texto key={index} pos={index + 1} nombre={elem} />
+      ))}
     </div>
   );
 };

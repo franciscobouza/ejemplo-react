@@ -1,16 +1,14 @@
 import './App.css';
+import Texto from './components/Texto';
 
 const App = () => {
-  const nombre = 'Rigoberta';
-  const apellido = 'Menchu';
-
   return (
     <div className="App">
       <header className="App-header">
         <h2>Ejemplo</h2>
-        <h3>
-          {nombre} {apellido}
-        </h3>
+        <Texto nombre="Rigoberta Menchu" />
+        <Texto nombre="Pablo Forlán" />
+        <Texto nombre="Morro García" />
       </header>
     </div>
   );
